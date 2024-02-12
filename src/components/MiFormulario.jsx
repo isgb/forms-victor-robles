@@ -59,6 +59,12 @@ export const MiFormulario = () => {
                     value={formik.values.email}
                     onChange={formik.handleChange}
                 />
+                 <div className='error'>
+                    {/* {formik.errors.nombre && formik.touched.nombre ? formik.errors.name : ""}  */}
+                    {formik.touched.email && formik.errors.email ? (
+                        <div>{formik.errors.email}</div>
+                    ) : null}
+                </div>
             </div>
 
             <input type="submit" value={'Enviar'}/>
